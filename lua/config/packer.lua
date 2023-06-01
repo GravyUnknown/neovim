@@ -1,14 +1,8 @@
-vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'sainnhe/everforest'
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
     use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-lualine/lualine.nvim',
@@ -36,5 +30,13 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     }
 }
+use 'nvim-treesitter/nvim-treesitter'
+
+use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.1',
+-- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+
 end)
 
